@@ -63,7 +63,7 @@ function printEvent($event){
         $link = str_replace("\\r","",$link);
         $line = "<a href='" . $link . "'>" . $line . "</a>";
     }
-    echo $line . "\n\r";
+    echo $line . "<br>\n\r";
 }
 
 ?>
