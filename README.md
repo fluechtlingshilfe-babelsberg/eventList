@@ -8,7 +8,15 @@ Next, install dependencys using composer:
 
 `docker run --rm -v $(pwd):/app composer/composer install`
 
-## Usage:
-Set `ical_url`, `ical_user` and `ical_pw`
-
-run `./loader.sh`
+Now set up your `docker-compose.yml`:
+```
+najuterminliste:
+    build: .
+    volumes:
+     - ./data:/data/
+     - ./templates:/root/templates
+    environment:
+     - ical_url=
+     - ical_user=
+     - ical_pw=
+```
