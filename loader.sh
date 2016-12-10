@@ -1,5 +1,5 @@
 #!/bin/bash
-
+cd /root
 if [ -z $ical_url ]; then echo "please set \$ical_url"; 
 exit;
 fi;
@@ -10,7 +10,7 @@ if [ -z $ical_user ]; then
 echo "no user specifyed. trying without auth."; 
 
 curl $ical_url  > $dir'MYical.ics'
-php generateList.php
+for i in templates/*.php; do php $i > /data/$(basename $i); done
  
 exit;
 fi;
@@ -21,4 +21,4 @@ fi;
 
 
  curl $ical_url  -u$ical_user:$ical_pw  > $dir'MYical.ics'
- php generateList.php
+ for i in templates/*.php; do php $i > /data/$(basename $i); done

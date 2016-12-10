@@ -3,3 +3,5 @@ setEnv*
 *.ics
 vendor/
 composer.lock
+data/*
+docker-compose.yml
