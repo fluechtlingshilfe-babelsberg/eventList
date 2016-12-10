@@ -1,3 +1,5 @@
 setEnv*
 .directory
 *.ics
+vendor/
+composer.lock
